@@ -195,16 +195,12 @@ $yellow-alpha-800: rgba($yellow-800,$alpha-24);
 $yellow-alpha-900: rgba($yellow-900,$alpha-32);
 $yellow-alpha-950: rgba($yellow-950,$alpha-40);
 
-
-/* role 
-**배경 영역(가장 넓은 면)**을 클릭 → 그게 bg-primary
-
-카드(패널) 클릭 → bg-surface
-
-헤더/탭 바 클릭 → bg-elevated 또는 bg-surface-2
-
-본문 텍스트 클릭 → text-primary
-
-설명 텍스트 클릭 → text-muted
-
-포인트 버튼 클릭 → accent*/
+/* role */
+$primary : $orange-300;
+$secondary-teal : $teal-400;
+$secondary-indigo : $indigo-500;
+$accent : $purple-400;
+$secondary-rose : $rose-300;
+$semantic-error : $red-500;
+$semantic-success : $green-500;
+$semantic-info: $yellow-500;

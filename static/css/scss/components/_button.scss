@@ -1,0 +1,98 @@
+@use '../common/colors' as *;
+@use '../common/tokens' as *;
+@use '../common/typography' as *;
+
+.btn {
+    border-radius: $radius-3;
+    font-size: $body-sm;
+    font-weight: 500;
+    color: $slate-950;
+    padding: 10px 12px;
+    box-sizing: border-box;
+    transition: ease-in-out .3s;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &-type01 {
+        @extend .btn;
+        background-color: $primary;
+
+        &:hover {
+            background-color: $orange-200;
+        }
+    }
+
+    &-type02 {
+        @extend .btn;
+        color: $slate-50;
+        background-color: $slate-600;
+
+        &:hover {
+            background-color: $slate-500;
+        }
+    }
+
+    &-type03 {
+        @extend .btn;
+        color: $slate-50;
+        border: 1px solid $slate-50;
+        background-color: unset;
+
+        &:hover {
+            border-color: $slate-800;
+            background-color: $slate-800;
+        }
+    }
+
+    &-type04 {
+        @extend .btn;
+        background-color: $semantic-success;
+
+        &:hover {
+            background-color: $gray-400;
+        }
+    }
+
+    &-type05 {
+        @extend .btn;
+        background-color: $semantic-error;
+
+        &:hover {
+            background-color: $red-400;
+        }
+    }
+
+    &-type06 {
+        @extend .btn;
+        background-color: $semantic-info;
+        
+        &:hover {
+            background-color: $yellow-400;
+        }
+    }
+
+    &:disabled {
+        color: $slate-500;
+        background-color: $slate-700;
+        
+        &:hover {
+            cursor: default;
+        }
+    }
+}
+
+.link {
+    font-size: $body-sm;
+    color: $secondary-rose;
+    font-weight: 500;
+    text-decoration: underline;
+    transition: ease-in-out .3s;
+
+    &:hover {
+        color: $rose-200;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}

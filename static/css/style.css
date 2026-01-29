@@ -1,0 +1,262 @@
+@charset "UTF-8";
+body {
+  min-height: 100dvh; /* 모바일 환경 고려 */
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, p,
+ul, ol, li, dl, dt, dd, img, button, input, select {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:active, a:focus, a:hover,
+button:active, button:focus, button:hover {
+  text-decoration: unset;
+  outline: unset;
+}
+
+img, picture, video, canvas, svg {
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button, input, textarea, select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+textarea {
+  white-space: pre-wrap;
+  resize: none;
+}
+
+/* iOS 탭 하이라이트 제거 */
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Main colors */
+/* slate */
+/* orange */
+/* teal */
+/* indigo */
+/* purple */
+/* rose */
+/* Neutral colors */
+/* gray */
+/* gray-alpha */
+/* Semantic colors */
+/* red */
+/* red-alpha */
+/* green */
+/* green-alpha */
+/* yellow */
+/* yellow-alpha */
+/* role */
+/* spacing */
+/* radius */
+/* KR */
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+.btn, .btn-type06, .btn-type05, .btn-type04, .btn-type03, .btn-type02, .btn-type01 {
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #020618;
+  padding: 10px 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+.btn:hover, .btn-type06:hover, .btn-type05:hover, .btn-type04:hover, .btn-type03:hover, .btn-type02:hover, .btn-type01:hover {
+  cursor: pointer;
+}
+.btn-type01 {
+  background-color: #FFB86A;
+}
+.btn-type01:hover {
+  background-color: #FFD6A7;
+}
+.btn-type02 {
+  color: #F8FAFC;
+  background-color: #45556C;
+}
+.btn-type02:hover {
+  background-color: #62748E;
+}
+.btn-type03 {
+  color: #F8FAFC;
+  border: 1px solid #F8FAFC;
+  background-color: unset;
+}
+.btn-type03:hover {
+  border-color: #1D293D;
+  background-color: #1D293D;
+}
+.btn-type04 {
+  background-color: #00C950;
+}
+.btn-type04:hover {
+  background-color: #D4D4D4;
+}
+.btn-type05 {
+  background-color: #FB2C36;
+}
+.btn-type05:hover {
+  background-color: #FF6467;
+}
+.btn-type06 {
+  background-color: #F0B100;
+}
+.btn-type06:hover {
+  background-color: #FDC700;
+}
+.btn:disabled, .btn-type01:disabled, .btn-type02:disabled, .btn-type03:disabled, .btn-type04:disabled, .btn-type05:disabled, .btn-type06:disabled {
+  color: #62748E;
+  background-color: #314158;
+}
+.btn:disabled:hover, .btn-type01:disabled:hover, .btn-type02:disabled:hover, .btn-type03:disabled:hover, .btn-type04:disabled:hover, .btn-type05:disabled:hover, .btn-type06:disabled:hover {
+  cursor: default;
+}
+
+.link {
+  font-size: 14px;
+  color: #FFA1AD;
+  font-weight: 500;
+  text-decoration: underline;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+.link:hover {
+  color: #FFCCD2;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 56px;
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  color: #90A1B9;
+  border-bottom: 1px solid #314158;
+  padding: 0 24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+.header-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header-title {
+  padding: 16px 0;
+  margin-right: 128px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.header-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+.header-menu li {
+  border-left: 1px solid #314158;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+.header-menu li:last-child {
+  border-right: 1px solid #314158;
+}
+.header-menu li.is-active {
+  color: #F8FAFC;
+  font-weight: 700;
+  border-bottom: 3px solid #FFB86A;
+}
+.header-menu li:hover, .header-menu li:focus, .header-menu li:active {
+  color: #F8FAFC;
+  font-weight: 700;
+}
+.header-menu li .tab {
+  padding: 16px 32px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.header-contact {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-left: 1px solid #314158;
+  padding: 16px 0 16px 24px;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+}
+.header-contact:hover, .header-contact:active, .header-contact:focus {
+  color: #F8FAFC;
+  font-weight: 700;
+}
+.header-contact .contact-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

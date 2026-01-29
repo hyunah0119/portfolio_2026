@@ -1,0 +1,81 @@
+@use '../common/colors' as *;
+@use '../common/tokens' as *;
+@use '../common/typography' as *;
+
+.header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 56px;
+    font-family: $font-en;
+    font-size: $body-md;
+    color: $slate-400;
+    border-bottom: 1px solid $slate-700;
+    padding: 0 $spacing-6;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    &-left {
+        display: flex;
+    }
+
+    &-title {
+        padding: $spacing-5 0;
+        margin-right: 128px;
+        box-sizing: border-box;
+    }
+
+    &-menu {
+        display: flex;
+        flex-flow: row wrap;
+
+        li {
+            border-left: 1px solid $slate-700;
+            transition: ease-in-out .3s;
+
+            &:last-child {
+                border-right: 1px solid $slate-700;
+            }
+
+            &.is-active {
+                color: $slate-50;
+                font-weight: 700;
+                border-bottom: 3px solid $primary;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $slate-50;
+                font-weight: 700;
+            }
+
+            .tab {
+                padding: $spacing-5 $spacing-7;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    &-contact {
+        justify-content: flex-end;
+        border-left: 1px solid $slate-700;
+        padding: $spacing-5 0 $spacing-5 $spacing-6;
+        transition: ease-in-out .3s;
+        cursor: pointer;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $slate-50;
+            font-weight: 700;
+        }
+
+        .contact-link {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
