@@ -1,8 +1,12 @@
 // common
-@use '../scss/common/reset';
+@use './common/reset';
 
 // components
-@use '../scss/components/button';
+@use './components/button';
 
 // layout
-@use '../scss/layout/header';
+@use './layout/header';
+@use './layout/footer';
+
+// pages
+@use './pages/home';

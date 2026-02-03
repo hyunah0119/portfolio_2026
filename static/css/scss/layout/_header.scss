@@ -1,6 +1,7 @@
 @use '../common/colors' as *;
 @use '../common/tokens' as *;
 @use '../common/typography' as *;
+@use '../common/device' as device;
 
 .header {
     display: flex;
@@ -12,17 +13,29 @@
     font-size: $body-md;
     color: $slate-400;
     border-bottom: 1px solid $slate-700;
-    padding: 0 $spacing-6;
     box-sizing: border-box;
     overflow: hidden;
+    @include device.pc {
+        padding: 0 $spacing-6;
+    }
+    @include device.mo {
+        padding: $spacing-5 0;
+    }
 
     &-left {
-        display: flex;
+        @include device.pc {
+            display: flex;
+        }
     }
 
     &-title {
-        padding: $spacing-5 0;
-        margin-right: 128px;
+        @include device.pc {
+            padding: $spacing-5 0;
+            margin-right: 128px;
+        }
+        @include device.mo {
+            padding: 0 $spacing-6;
+        }
         box-sizing: border-box;
     }
 
@@ -59,7 +72,6 @@
     }
 
     &-contact {
-        justify-content: flex-end;
         border-left: 1px solid $slate-700;
         padding: $spacing-5 0 $spacing-5 $spacing-6;
         transition: ease-in-out .3s;
@@ -76,6 +88,40 @@
             display: block;
             width: 100%;
             height: 100%;
+        }
+    }
+
+    &-right {
+        @include device.mo {
+            width: 56px;
+            height: 100%;
+        }
+
+        .menu-btn {
+            width: 100%;
+            height: 100%;
+
+            i {
+                font-size: 18px;
+            }
+
+            .open {
+                display: block;
+            }
+
+            .close {
+                display: none;
+            }
+
+            &.is-open {
+                .open {
+                    display: none;
+                }
+                
+                .close {
+                    display: block;
+                }
+            }
         }
     }
 }

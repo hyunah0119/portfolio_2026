@@ -1,6 +1,8 @@
+@use './typography' as *;
+
 body {
     min-height: 100dvh; /* 모바일 환경 고려 */
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: $font-kr;
 }
 
 html, body, h1, h2, h3, h4, h5, h6, p, 
