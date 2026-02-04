@@ -14,12 +14,12 @@
     color: $slate-400;
     border-bottom: 1px solid $slate-700;
     box-sizing: border-box;
-    overflow: hidden;
     @include device.pc {
         padding: 0 $spacing-6;
     }
     @include device.mo {
         padding: $spacing-5 0;
+        position: relative;
     }
 
     &-left {
@@ -98,8 +98,10 @@
         }
 
         .menu-btn {
+            display: block;
             width: 100%;
             height: 100%;
+            text-align: center;
 
             i {
                 font-size: 18px;
@@ -122,6 +124,22 @@
                     display: block;
                 }
             }
+        }
+    }
+    
+    // mo nav
+    .nav {
+        display: none;
+        width: 100%;
+        height: 100dvh;
+        background-color: $slate-900;
+        position: absolute;
+        top: 56px;
+        left: 0;
+        transition: ease-in-out .3s;
+
+        &.is-open {
+            display: block;
         }
     }
 }

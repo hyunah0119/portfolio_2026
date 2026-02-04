@@ -37,6 +37,9 @@
             flex-flow: row wrap;
 
             .social-link {
+                display: flex;
+                flex-flow: row wrap;
+                align-items: center;
                 border-left: 1px solid $slate-700;
                 padding: $spacing-5 $spacing-7;
                 box-sizing: border-box;
@@ -111,7 +114,10 @@
         }
 
         .copyright {
+            width: 100%;
             font-size: $body-sm;
+            text-align: center;
+            border-top: 1px solid $slate-700;
         }
     }
 }
