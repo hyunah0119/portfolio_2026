@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="kr">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,219 +16,168 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
-    <!-- pc -->
-    <div class="pc">
-        <main class="main">
-            <div class="wrap">
-                <!-- header -->
-                <header class="header">
-                    <div class="header-left">
-                        <div class="header-title">HYNA's Portfolio</div>
-                        <ul class="header-menu" role="tablist">
-                            <li class="is-active" role="presentation">
-                                <button class="tab" role="tab" aria-selected="true">_hello</button>
-                            </li>
-                            <li role="presentation">
-                                <button class="tab" role="tab" aria-selected="false">_about-me</button>
-                            </li>
-                            <li role="presentation">
-                                <button class="tab" role="tab" aria-selected="false">_projects</button>
-                            </li>
-                        </ul>
+    <main class="main">
+        <div class="wrap">
+            <!-- header -->
+            <header class="header">
+                <div class="header-left">
+                    <h1 class="header-title">HYNA's Portfolio</h1>
+
+                    <ul class="header-menu" role="tablist">
+                        <li class="is-active" role="presentation">
+                            <button class="tab" role="tab" aria-selected="true" data-component="content-hello">_hello</button>
+                        </li>
+                        <li role="presentation">
+                            <button class="tab" role="tab" aria-selected="false" data-component="content-about">_about-me</button>
+                        </li>
+                        <li role="presentation">
+                            <button class="tab" role="tab" aria-selected="false" data-component="content-works">_works</button>
+                        </li>
+                        <li role="presentation">
+                            <button class="tab" role="tab" aria-selected="false" data-component="content-projects">_projects</button>
+                        </li>
+                        <li role="presentation">
+                            <button class="tab" role="tab" aria-selected="false" data-component="content-skills">_skills</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="header-right">
+                    <div class="header-contact">
+                        <a class="contact-link">_contact-me</a>
                     </div>
-                    <div class="header-right">
-                        <div class="header-contact">
-                            <a class="contact-link">_contact-me</a>
-                        </div>
-                    </div>
-                </header>
+                    <button class="menu-btn" aria-label="Open navigation menu">
+                        <i class="ri-menu-line open"></i>
+                        <i class="ri-close-line close"></i>
+                    </button>
+                </div>
 
-                <!-- contents -->
-                <section class="content">
-                    <section class="content-title">
-                        <article class="title-wrap">
-                            <div class="title">
-                                <p class="title__name">HYNA's Portfolio</p>
-                                <span class="title__job">> Web Publisher / UX developer</span>
-                            </div>
-    
-                            <div class="sub-title">
-                                <span class="sub-title__text">
-                                    // JSP부터 React까지 다양한 환경에서<br>
-                                    // 시맨틱하고 구조적인 마크업을 구현해왔습니다.
-                                </span>
-                                <p class="sub-title__code">
-                                    <span class="indigo">const</span> <span class="teal">hyna</span> = 
-                                    <span class="rose">"고객의 시선으로 생각하고 직관적인 UI/UX를 구현하는 웹 퍼블리셔."</span>
-                                </p>
-                            </div>
-                        </article>
-                    </section>
-                    <section class="content-code">
-                        <article class="code-wrap">
-                            <div class="code">
-                                <div class="code-box" data-opacity="2">
-                                    <span class="indigo">const</span> <span class="teal">user</span> = <span class="yellow">{</span> <br>
-                                    <div class="indent">
-                                        <span class="indigo">role</span>: <span class="rose">['Web publisher', 'UX developer', 'Front-end developer']</span>, <br>
-                                        <span class="indigo">focus</span>: <span class="rose">['UI', 'UX', 'Accessibility', 'Semantic Markup']</span>, <br>
-                                        <span class="indigo">stack</span>: <span class="rose">['HTML', 'CSS', 'SCSS', 'Javascript', 'React']</span> <br>
-                                    </div>
-                                    <span class="yellow">}</span>;
-                                </div>
+                <nav class="nav">
+                    <ul class="nav-list" role="tablist">
+                        <li class="is-active" role="presentation">
+                            <button class="tab" role="tab" aria-selected="true" data-component="content-hello">_hello</button>
+                        </li>
+                        <li role="presentation">
+                            <button class="tab" role="tab" aria-selected="false" data-component="content-about">_about-me</button>
+                        </li>
+                        <li role="presentation">
+                            <button class="tab" role="tab" aria-selected="false" data-component="content-works">_works</button>
+                        </li>
+                        <li role="presentation">
+                            <button class="tab" role="tab" aria-selected="false" data-component="content-projects">_projects</button>
+                        </li>
+                        <li role="presentation">
+                            <button class="tab" role="tab" aria-selected="false" data-component="content-skills">_skills</button>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
 
-                                <div class="code-box" data-opacity="4">
-                                    <span class="indigo">const</span> <span class="teal">user</span> = <span class="yellow">{</span> <br>
-                                    <div class="indent">
-                                        <span class="indigo">role</span>: <span class="rose">['Web publisher', 'UX developer', 'Front-end developer']</span>, <br>
-                                        <span class="indigo">focus</span>: <span class="rose">['UI', 'UX', 'Accessibility', 'Semantic Markup']</span>, <br>
-                                        <span class="indigo">stack</span>: <span class="rose">['HTML', 'CSS', 'SCSS', 'Javascript', 'React']</span> <br>
-                                    </div>
-                                    <span class="yellow">}</span>;
-                                </div>
+            <!-- contents -->
+            <div id="content-container"></div>
 
-                                <div class="code-box" data-opacity="9">
-                                    <span class="indigo">const</span> <span class="teal">user</span> = <span class="yellow">{</span> <br>
-                                    <div class="indent">
-                                        <span class="indigo">role</span>: <span class="rose">['Web publisher', 'UX developer', 'Front-end developer']</span>, <br>
-                                        <span class="indigo">focus</span>: <span class="rose">['UI', 'UX', 'Accessibility', 'Semantic Markup']</span>, <br>
-                                        <span class="indigo">stack</span>: <span class="rose">['HTML', 'CSS', 'SCSS', 'Javascript', 'React']</span> <br>
-                                    </div>
-                                    <span class="yellow">}</span>;
-                                </div>
-
-                                <div class="code-box" data-opacity="4">
-                                    <span class="indigo">const</span> <span class="teal">user</span> = <span class="yellow">{</span> <br>
-                                    <div class="indent">
-                                        <span class="indigo">role</span>: <span class="rose">['Web publisher', 'UX developer', 'Front-end developer']</span>, <br>
-                                        <span class="indigo">focus</span>: <span class="rose">['UI', 'UX', 'Accessibility', 'Semantic Markup']</span>, <br>
-                                        <span class="indigo">stack</span>: <span class="rose">['HTML', 'CSS', 'SCSS', 'Javascript', 'React']</span> <br>
-                                    </div>
-                                    <span class="yellow">}</span>;
-                                </div>
-
-                                <div class="code-box" data-opacity="2">
-                                    <span class="indigo">const</span> <span class="teal">user</span> = <span class="yellow">{</span> <br>
-                                    <div class="indent">
-                                        <span class="indigo">role</span>: <span class="rose">['Web publisher', 'UX developer', 'Front-end developer']</span>, <br>
-                                        <span class="indigo">focus</span>: <span class="rose">['UI', 'UX', 'Accessibility', 'Semantic Markup']</span>, <br>
-                                        <span class="indigo">stack</span>: <span class="rose">['HTML', 'CSS', 'SCSS', 'Javascript', 'React']</span> <br>
-                                    </div>
-                                    <span class="yellow">}</span>;
-                                </div>
-                            </div>
-                        </article>
-                    </section>
-                </section>
-
-                <!-- footer -->
-                <footer class="footer">
-                    <div class="footer-left">
-                        <p class="copyright">
-                            <i class="ri-copyright-line"></i>2026 HYNA. All rights reserved.<br>
-                            Design inspired by a free Figma resource.
-                        </p>
-    
-                        <div class="footer-social">
-                            <a href="#" class="social-link">
-                                <i class="ri-mail-fill"></i>
-                            </a>
-                            <a href="#" class="social-link">
-                                <i class="ri-notion-fill"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="footer-right">
-                        <a href="#" class="social-link">
-                            @hyunah0119
-                            <i class="ri-github-fill"></i>
-                        </a>
-                    </div>
-                </footer>
-            </div>
-        </main>
-    </div>
-
-    <!-- mo -->
-    <div class="mo">
-        <main class="main">
-            <div class="wrap">
-                <!-- header -->
-                <header class="header">
-                    <div class="header-left">
-                        <div class="header-title">HYNA's Portfolio</div>
-                    </div>
-                    <div class="header-right">
-                        <button class="menu-btn" aria-label="Open navigation menu">
-                            <i class="ri-menu-line open"></i>
-                            <i class="ri-close-line close"></i>
-                        </button>
-                    </div>
-
-                    <!-- nav -->
-                    <nav class="nav is-open">
-                        <ul>
-                            <ul class="" role="tablist">
-                                <li class="is-active" role="presentation">
-                                    <button class="tab" role="tab" aria-selected="true">_hello</button>
-                                </li>
-                                <li role="presentation">
-                                    <button class="tab" role="tab" aria-selected="false">_about-me</button>
-                                </li>
-                                <li role="presentation">
-                                    <button class="tab" role="tab" aria-selected="false">_projects</button>
-                                </li>
-                            </ul>
-                        </ul>
-                    </nav>
-                </header>
-
-
-                <!-- contents -->
-                <section class="content">
-                    <article class="content-title">
-                        <div class="title">
-                            <p class="title__name">HYNA's Portfolio</p>
-                            <span class="title__job">> Web Publisher /<br>UX developer</span>
-                        </div>
-
-                        <div class="sub-title">
-                            <span class="sub-title__text">
-                                // JSP부터 React까지 다양한 환경에서<br>
-                                // 시맨틱하고 구조적인 마크업을 구현해왔습니다.
-                            </span>
-                            <p class="sub-title__code">
-                                <span class="indigo">const</span> <span class="teal">hyna</span> = 
-                                <span class="rose">"고객의 시선으로 생각하고 직관적인 UI/UX를 구현하는 웹 퍼블리셔."</span>
-                            </p>
-                        </div>
-                    </section>
-                </section>
-
-                <!-- footer -->
-                <footer class="footer">
+            <!-- footer -->
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-title">find me in:</div>
                     <div class="footer-social">
-                        <a href="#" class="social-link">
+                        <a href="mailto:yrs98058@naver.com" class="social-link" aria-label="hyna에게 이메일 보내기" target="_blank">
                             <i class="ri-mail-fill"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="http://bit.ly/477JTrX" class="social-link" aria-label="hyna의 notion 바로가기기" target="_blank">
                             <i class="ri-notion-fill"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="https://github.com/hyunah0119" class="social-link" aria-label="hyna의 github 바로가기기" target="_blank">
                             <i class="ri-github-fill"></i>
                         </a>
                     </div>
-                    <p class="copyright">
-                        <i class="ri-copyright-line"></i>2026 HYNA. All rights reserved.
-                    </p>
-                </footer>
-            </div>
-        </main>
-    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- copyright -->
+        <p class="copyright">
+            <i class="ri-copyright-line"></i>2026 HYNA. All rights reserved.
+            <span>Design inspired by a free Figma resource.</span>
+        </p>
+    </main>
 
     <script>
-        // mobile menu btn
+        // HTML 컴포넌트 불러오기
+        async function loadComponent(url, containerId) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const html = await response.text();
+                const container = document.getElementById(containerId);
+                if (container) {
+                    container.innerHTML = html;
+                }
+            } catch (error) {
+                console.error('컴포넌트를 불러오는 중 오류가 발생했습니다:', error);
+            }
+        }
 
+        // 페이지 로드 시 기본 content 컴포넌트 불러오기 및 탭 이벤트 설정
+        document.addEventListener('DOMContentLoaded', function() {
+            // 기본 탭 콘텐츠 로드 (_hello)
+            loadComponent('components/content-hello.html', 'content-container');
+
+            // 탭 버튼 클릭 시 컴포넌트 교체
+            const tabButtons = document.querySelectorAll('.header-menu .tab, .nav-list .tab');
+
+            function setActiveTab(selectedButton) {
+                tabButtons.forEach(button => {
+                    const isActive = button === selectedButton;
+                    button.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                    if (button.parentElement) {
+                        button.parentElement.classList.toggle('is-active', isActive);
+                    }
+                });
+            }
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const componentName = this.dataset.component;
+                    if (componentName) {
+                        loadComponent(`components/${componentName}.html`, 'content-container');
+                        setActiveTab(this);
+                    }
+                });
+            });
+        });
+
+        // mobile menu btn
+        const menuBtn = document.querySelector('.menu-btn');
+        const nav = document.querySelector('.nav');
+        const body = document.body;
+
+        if (menuBtn && nav) {
+            menuBtn.addEventListener('click', function() {
+                // 버튼과 네비게이션에 is-open 클래스 토글
+                menuBtn.classList.toggle('is-open');
+                nav.classList.toggle('is-open');
+                
+                // 메뉴가 열렸을 때 body 스크롤 방지
+                if (nav.classList.contains('is-open')) {
+                    body.style.overflow = 'hidden';
+                } else {
+                    body.style.overflow = '';
+                }
+            });
+
+            // 네비게이션 메뉴 항목 클릭 시 메뉴 닫기
+            const navTabs = nav.querySelectorAll('.tab');
+            navTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    menuBtn.classList.remove('is-open');
+                    nav.classList.remove('is-open');
+                    body.style.overflow = '';
+                });
+            });
+        }
     </script>
 </body>
 </html>

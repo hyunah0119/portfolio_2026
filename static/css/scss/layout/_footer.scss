@@ -6,118 +6,77 @@
 .footer {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
     width: 100%;
+    height: 56px;
     font-family: $font-en;
     font-size: $body-md;
     color: $slate-400;
     border-top: 1px solid $slate-700;
-    @include device.pc {
-        padding: 0 $spacing-6;
-    }
     box-sizing: border-box;
-    overflow: hidden;
-
-    &-left {
-        display: flex;
-        flex-flow: row wrap;
-
-        .copyright {
-            margin-right: 20px;
-            padding: $spacing-5 0;
-            box-sizing: border-box;
-
-           i {
-                margin-right: 3px;
-            } 
-        }
-
-        .footer-social {
-            display: flex;
-            flex-flow: row wrap;
-
-            .social-link {
-                display: flex;
-                flex-flow: row wrap;
-                align-items: center;
-                border-left: 1px solid $slate-700;
-                padding: $spacing-5 $spacing-7;
-                box-sizing: border-box;
-                transition: ease-in-out .3s;
-
-                i {
-                    font-size: $heading-h4;
-                }
-
-                &:last-child {
-                    border-right: 1px solid $slate-700;
-                }
-
-                &:hover {
-                    color: $slate-50;
-                }
-            }
-        }
+    @include device.pc {
+        background-color: $slate-900;
+        border-bottom-left-radius: $radius-3;
+        border-bottom-right-radius: $radius-3;
     }
 
-    &-right {
+    &-content {
         display: flex;
         flex-flow: row wrap;
         align-items: center;
-
-        .social-link {
-            display: flex;
-            flex-flow: row wrap;
-            align-items: center;
-            border-left: 1px solid $slate-700;
-            padding: $spacing-5 0 $spacing-5 $spacing-6;
-            box-sizing: border-box;
-            transition: ease-in-out .3s;
-
-            i {
-                font-size: $heading-h4;
-                margin-left: 10px;
-            }
-
-            &:hover {
-                color: $slate-50;
-            }
-        }
+        width: 100%;
+        height: 100%;
     }
 
-    @include device.mo {
-        &-social {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
+    &-title {
+        height: 100%;
+        border-right: 1px solid $slate-700;
+        @include device.pc {
+            line-height: 56px;
+            padding: 0 $spacing-6;
+        }
+        @include device.mo {
+            width: 50%;
+            padding: $spacing-5 $spacing-6;
+        }
+        box-sizing: border-box;
+    }
+
+    &-social {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        height: 100%;
+        @include device.mo {
+            width: 50%;
         }
 
         .social-link {
-            width: calc(100%/3);
-            height: auto;
-            text-align: center;
-            padding: 18px;
+            border-right: 1px solid $slate-700;
             box-sizing: border-box;
+            transition: ease-in-out .3s;
+            @include device.pc {
+                padding: $spacing-5;
+            }
+            @include device.mo {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                flex: 1;
+
+                &:last-child {
+                    border-right: 0;
+                }
+            }
 
             i {
                 font-size: $heading-h5;
             }
 
-            &:nth-child(2) {
-                border: {
-                    left: 1px solid $slate-700;
-                    right: 1px solid $slate-700;
-                };
+            &:hover {
+                color: $slate-50;
             }
-        }
-
-        .copyright {
-            width: 100%;
-            font-size: $body-sm;
-            text-align: center;
-            border-top: 1px solid $slate-700;
         }
     }
 }

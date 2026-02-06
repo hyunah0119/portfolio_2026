@@ -15,11 +15,12 @@
     border-bottom: 1px solid $slate-700;
     box-sizing: border-box;
     @include device.pc {
-        padding: 0 $spacing-6;
+        padding-right: $spacing-6;
     }
     @include device.mo {
         padding: $spacing-5 0;
         position: relative;
+        z-index: 10;
     }
 
     &-left {
@@ -29,9 +30,12 @@
     }
 
     &-title {
+        font-size: $body-md;
+        font-weight: normal;
+
         @include device.pc {
-            padding: $spacing-5 0;
-            margin-right: 128px;
+            width: 325px;
+            padding: $spacing-5 $spacing-6;
         }
         @include device.mo {
             padding: 0 $spacing-6;
@@ -40,7 +44,10 @@
     }
 
     &-menu {
-        display: flex;
+        display: none;
+        @include device.pc {
+            display: flex;
+        }
         flex-flow: row wrap;
 
         li {
@@ -72,6 +79,10 @@
     }
 
     &-contact {
+        display: none;
+        @include device.pc {
+            display: block;
+        }
         border-left: 1px solid $slate-700;
         padding: $spacing-5 0 $spacing-5 $spacing-6;
         transition: ease-in-out .3s;
@@ -98,7 +109,10 @@
         }
 
         .menu-btn {
-            display: block;
+            display: none;
+            @include device.mo {
+                display: block;
+            }
             width: 100%;
             height: 100%;
             text-align: center;
@@ -129,17 +143,54 @@
     
     // mo nav
     .nav {
-        display: none;
-        width: 100%;
+        @include device.pc {
+            display: none !important;
+        }
+        @include device.mo {
+            width: 100%;
+            display: block;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(-20px);
+        }
         height: 100dvh;
         background-color: $slate-900;
         position: absolute;
         top: 56px;
         left: 0;
-        transition: ease-in-out .3s;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
-        &.is-open {
+        @include device.mo {
+            &.is-open {
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        &-list {
+            li {
+                border-bottom: 1px solid $slate-700;
+
+                &.is-active {
+                    .tab {
+                        color: $slate-50;
+                    }
+                }
+            }
+        }
+
+        .tab {
             display: block;
+            width: 100%;
+            font-size: $body-md;
+            padding: $spacing-5 $spacing-6;
+            box-sizing: border-box;
+
+            &:focus,
+            &:active {
+                color: $slate-50;
+            }
         }
     }
 }

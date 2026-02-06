@@ -7,6 +7,8 @@
 // layout
 @use './layout/header';
 @use './layout/footer';
+@use './layout/layout';
 
 // pages
-@use './pages/home';
+@use './pages/hello';
+@use './pages/about';

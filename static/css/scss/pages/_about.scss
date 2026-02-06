@@ -1,0 +1,21 @@
+@use '../common/colors' as *;
+@use '../common/tokens' as *;
+@use '../common/typography' as *;
+@use '../common/device' as device;
+
+.about {
+    width: 100%;
+    height: 100%;
+
+    &-menu {
+        width: 325px;
+        height: 100%;
+        border-right: 1px solid $slate-700;
+
+        &__list {
+            font-family: $font-en;
+            font-size: $body-md;
+            color: $slate-50;
+        }
+    }
+}
